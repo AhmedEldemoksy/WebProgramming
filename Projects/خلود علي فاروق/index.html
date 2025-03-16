@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Harry Potter World</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap 5 CSS (Local) -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <style>
+    /* General Reset & Body */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #1a1a1a;
+      color: #fff;
+      overflow-x: hidden;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navbar */
+    nav.navbar {
+      background-color: rgba(0, 0, 0, 0.7);
+      transition: background-color 0.5s;
+    }
+    nav.navbar:hover {
+      background-color: rgba(0, 0, 0, 0.9);
+    }
+    nav.navbar .navbar-brand {
+      font-weight: bold;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    nav.navbar .nav-link {
+      text-transform: uppercase;
+      margin: 0 10px;
+      transition: color 0.3s;
+    }
+    nav.navbar .nav-link:hover {
+      color: #f1c40f;
+    }
+
+    /* Hero Section */
+    .hero-section {
+      background: url("images/hogwarts-bg.jpg") no-repeat center center;
+      background-size: cover;
+      background-attachment: fixed;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      text-align: center;
+    }
+    .hero-overlay {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      padding: 0 15px;
+      animation: fadeIn 2s ease forwards;
+    }
+    .hero-content h1 {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+    }
+    .hero-content p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #ddd;
+    }
+    .hero-content .btn-hero {
+      font-size: 1.2rem;
+      padding: 12px 30px;
+      background-color: #f1c40f;
+      color: #000;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    .hero-content .btn-hero:hover {
+      background-color: #d4ac0d;
+      transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(30px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Characters Section */
+    #characters {
+      padding: 60px 0;
+    }
+    #characters .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 2rem;
+      letter-spacing: 1px;
+      position: relative;
+    }
+    .character-card {
+      background: #222;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      transition: transform 0.5s ease;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+    .character-card img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .character-card h3 {
+      margin: 15px;
+      font-weight: bold;
+    }
+    .character-card p {
+      margin: 0 15px 15px 15px;
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+    .character-card:hover {
+      transform: translateX(15px);
+    }
+
+    /* Houses Section */
+    #houses {
+      padding: 60px 0;
+      background: #111;
+    }
+    #houses .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+    .house-card {
+      background: #222;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 30px;
+      transition: all 0.3s ease-in-out;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      text-align: center;
+      padding: 20px;
+    }
+    .house-card img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 15px;
+    }
+    .house-card h4 {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .house-card p {
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+    .house-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(255, 255, 0, 0.5);
+    }
+
+    /* Events & 3D Harry Section */
+    #events-3d {
+      padding: 60px 0;
+    }
+    #events-3d .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+    .events-3d-container {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
+    }
+    .harry-3d-container {
+      perspective: 1000px;
+    }
+    .harry-3d {
+      width: 300px;
+      max-width: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.8s ease;
+      border: 4px solid #fff;
+      box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+    }
+    .harry-3d:hover {
+      transform: rotateY(20deg) rotateX(5deg);
+    }
+    .events-info {
+      max-width: 500px;
+      background: #222;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+    .events-info h3 {
+      margin-bottom: 20px;
+      font-weight: bold;
+    }
+    .events-info ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+    .events-info ul li {
+      margin-bottom: 10px;
+      padding-left: 20px;
+      position: relative;
+      color: #ccc;
+    }
+    .events-info ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #f1c40f;
+    }
+
+    /* Gallery Section */
+    #gallery {
+      padding: 60px 0;
+      background: #111;
+    }
+    #gallery .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+    .gallery-img {
+      transition: transform 0.3s ease;
+      margin-bottom: 15px;
+    }
+    .gallery-img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      background: #000;
+      color: #ccc;
+      padding: 20px 0;
+      text-align: center;
+    }
+    .social-icons a {
+      color: #ccc;
+      margin: 0 10px;
+      font-size: 1.2rem;
+      transition: color 0.3s;
+    }
+    .social-icons a:hover {
+      color: #f1c40f;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#home">Harry Potter</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" 
+            aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="mainNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="#characters">Characters</a></li>
+        <li class="nav-item"><a class="nav-link" href="#houses">Houses</a></li>
+        <li class="nav-item"><a class="nav-link" href="#events-3d">Events</a></li>
+        <!-- Gallery Link -->
+        <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero Section -->
+<header class="hero-section" id="home">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1>Harry Potter World</h1>
+    <p>Discover the magic of Hogwarts and beyond.</p>
+    <a href="#characters" class="btn btn-hero">Explore Now</a>
+  </div>
+</header>
+
+<!-- Characters Section -->
+<section id="characters">
+  <div class="container">
+    <h2 class="section-title">Main Characters</h2>
+    <div class="row">
+      <div class="col-md-4">
+        <div class="character-card">
+          <img src="images/harry.png" alt="Harry Potter">
+          <h3>Harry Potter</h3>
+          <p>The Boy Who Lived, known for his courage and loyalty.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="character-card">
+          <img src="images/ron.png" alt="Ron Weasley">
+          <h3>Ron Weasley</h3>
+          <p>Harry's best friend, always ready to stand by his side.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="character-card">
+          <img src="images/hermione.png" alt="Hermione Granger">
+          <h3>Hermione Granger</h3>
+          <p>The brightest witch of her age, brilliant and brave.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-4 offset-md-2">
+        <div class="character-card">
+          <img src="images/dumbledore.png" alt="Albus Dumbledore">
+          <h3>Albus Dumbledore</h3>
+          <p>Headmaster of Hogwarts, wise and powerful wizard.</p>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="character-card">
+          <img src="images/voldemort.png" alt="Lord Voldemort">
+          <h3>Lord Voldemort</h3>
+          <p>The Dark Lord, feared by many, and Harry's greatest enemy.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Houses Section -->
+<section id="houses">
+  <div class="container">
+    <h2 class="section-title">Hogwarts Houses</h2>
+    <div class="row justify-content-center">
+      <div class="col-md-3">
+        <div class="house-card">
+          <img src="images/gryffindor.png" alt="Gryffindor">
+          <h4>Gryffindor</h4>
+          <p>Values courage, bravery, nerve, and chivalry.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="house-card">
+          <img src="images/slytherin.png" alt="Slytherin">
+          <h4>Slytherin</h4>
+          <p>Values ambition, cunning, leadership, and resourcefulness.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="house-card">
+          <img src="images/ravenclaw.png" alt="Ravenclaw">
+          <h4>Ravenclaw</h4>
+          <p>Values intelligence, knowledge, and wit.</p>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="house-card">
+          <img src="images/hufflepuff.png" alt="Hufflepuff">
+          <h4>Hufflepuff</h4>
+          <p>Values hard work, patience, loyalty, and fair play.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Events & 3D Harry Section -->
+<section id="events-3d">
+  <div class="container">
+    <h2 class="section-title">Key Events</h2>
+    <div class="events-3d-container">
+      <div class="harry-3d-container">
+        <img src="images/harry.png" alt="3D Harry" class="harry-3d">
+      </div>
+      <div class="events-info">
+        <h3>Important Milestones</h3>
+        <ul>
+          <li>Discovering he is a wizard and attending Hogwarts.</li>
+          <li>Confronting Voldemort multiple times to protect the wizarding world.</li>
+          <li>Learning about the prophecy that ties his fate to the Dark Lord.</li>
+          <li>Forming strong friendships that help him overcome challenges.</li>
+          <li>Ultimately defeating Voldemort in the Battle of Hogwarts.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Gallery Section (Bootstrap 5 Carousel - 1 image per slide) -->
+<section id="gallery">
+  <div class="container">
+    <h2 class="section-title">Gallery</h2>
+    <div id="hpGallery" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+         <div class="carousel-item active">
+           <img src="images/hh1.jpg" class="d-block w-40 mx-auto gallery-img" alt="Image 1" >
+        </div> 
+        <div class="carousel-item">
+          <img src="images/hhh22.jpg" class="d-block w-30 mx-auto gallery-img" alt="Image 2">
+        </div>
+        <!-- <div class="carousel-item">
+          <img src="images/h3.jpg" class="d-block w-5 mx-auto gallery-img" alt="Image 3">
+        </div> -->
+        <div class="carousel-item">
+          <img src="images/h4.jpg" class="d-block w-50  mx-auto gallery-img" alt="Image 4">
+        </div>
+        <div class="carousel-item">
+          <img src="images/hh5.jpg" class="d-block  mx-auto gallery-img" alt="Image 5">
+        </div>
+        <!-- <div class="carousel-item">
+          <img src="images/h6.jpg" class="d-block w-5 mx-auto  gallery-img" alt="Image 6">
+        </div> -->
+        <!-- <div class="carousel-item">
+          <img src="images/h7.jpg" class="d-block w-5 mx-auto gallery-img" alt="Image 7">
+        </div> -->
+        <div class="carousel-item">
+          <img src="images/h8.jpg" class="d-block w-40 mx-auto gallery-img" alt="Image 8">
+        </div>
+        <div class="carousel-item" >
+          <img src="images/h9.jpg" class="d-block w-40 mx-auto  gallery-img" alt="Image 9">
+        </div>
+      </div>
+     
+      <!-- Carousel Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#hpGallery" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#hpGallery" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <p>© 2025 Harry Potter Universe. All Rights Reserved.</p>
+    <div class="social-icons">
+      <a href="#">Facebook</a>
+      <a href="#">Instagram</a>
+      <a href="#">Twitter</a>
+      <a href="#">YouTube</a>
+    </div>
+    <p>Contact: info@hogwarts.com | +1 234 567 890</p>
+  </div>
+</footer>
+ 
+
+<!-- Bootstrap 5 JS Bundle (includes Popper) -->
+<script src="js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

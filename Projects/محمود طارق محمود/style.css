@@ -1,0 +1,135 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", serif;
+  }
+  
+  body{
+    background-color: #081b29;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    padding: 30px 0;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .main-section{
+    width: 90%;
+    height: 90%;
+    background-color:#4ad0ee1b;
+    border-radius: 40px;
+    box-shadow: 5px 5px 50px 1px #4acfee;
+  }
+ 
+  .omar {
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    color: white;
+}
+.omar h1{
+  font-size: 40px;
+  margin-top: 30px;
+
+}
+ 
+.omar-info button {
+  padding: 12px 25px; 
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(to right, #4acfee, #53f8c9);
+  border: none;
+  border-radius: 30px; 
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  margin-left: 210px;
+  margin-top: 33px;
+}
+
+.omar-info button:hover {
+  background: linear-gradient(to right, #6070fd, #5bbdff); 
+  transform: scale(1.08); 
+}
+
+.omar-info {
+    flex: 1; 
+}
+
+  .omar-info h1 span{
+    margin-top: 5px;
+    font-size: 40px;
+    text-transform: uppercase;
+    background:linear-gradient(to right, #4acfee, #53f8c9, #6070fd, #5bbdff, #4acfee);
+    background-size: 200%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .omar-info p {
+    max-width: 600px;
+    margin-top: 30px;
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.8;
+    padding: 15px 25px; 
+    line-height: 2.3;
+    border: 2px solid #4acfee; 
+    border-radius: 20px; 
+    background: rgba(74, 207, 238, 0.1); 
+    
+}
+
+.omar-img {
+  width: 400px; 
+  height: 400px;
+  position: relative; 
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  box-shadow: 0 0 10px #4eddfd;
+  margin-top: 50px;
+}
+
+.about {
+  position: absolute;  
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  flex-direction: column;  
+  align-items: center;
+  justify-content: center; 
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  padding: 20px;
+  text-transform: uppercase;
+  
+}
+
+.about h2 {
+  margin-bottom: 30px;
+  font-size: 24px; 
+  background:linear-gradient(to right, #4acfee, #53f8c9, #6070fd, #5bbdff, #4acfee);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.about p {
+  font-size:8;
+  line-height: 1.5;
+  margin: 25px 0; 
+}
+.omar-img:hover .about {
+  opacity: 1;
+  cursor: pointer;
+}
+
+
+  
+  
+ 

@@ -1,0 +1,283 @@
+body {
+    background-color: rgb(159, 234, 209);
+    padding: 0;
+    margin: 0;
+    font: 16px arial;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: rgb(41, 84, 84);
+    color: white;
+    border-bottom: rgb(61, 48, 48) 4px solid;
+    min-height: 70px;
+    padding-top: 30px;
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header li {
+    float: left;
+
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+header #name {
+    float: left;
+}
+
+header #name h1 {
+    margin: 0;
+
+}
+
+header nav {
+    float: right;
+    margin-top: 10px;
+}
+
+header .highlight,
+header .current a {
+    color: rgb(209, 96, 96);
+    font-weight: bold;
+
+}
+
+#showcase {
+    min-height: 450px;
+    background: url('../img/WhatsApp\ Image\ 2025-03-01\ at\ 17.34.38_3e13d2a6.jpg') no-repeat;
+    background-size: contain;
+    background-position: right;
+    width: 100%;
+    height: 100px;
+
+
+    text-align: left;
+    color: cadetblue;
+    border-bottom: rgb(61, 48, 48) 4px solid;
+
+}
+
+
+
+#showcase h1 {
+    margin-top: 100px;
+    font-size: 50px;
+    margin-bottom: 40px;
+}
+
+#showcase p {
+    text-align: left;
+    float: left;
+    width: 50%;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    font-size: 30px;
+
+
+}
+
+.mm {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+search {
+    background-color: rgb(41, 84, 84);
+    color: white;
+    border-bottom: rgb(71, 15, 15);
+    min-height: 70px;
+    padding-top: 30px;
+}
+
+search a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+
+search li {
+    float: left;
+    display: inline;
+    padding: 0 20px 0 20px;
+}
+
+search #ss {
+    float: left;
+
+}
+
+search #ss h1 {
+    margin: 0;
+}
+
+search nav {
+    float: right;
+}
+
+search nav {
+    float: right;
+    margin-top: 10px;
+}
+
+search .eldon,
+search .eldon a {
+    color: rgb(209, 96, 96);
+    font-weight: bold;
+
+}
+
+footer {
+    font-size: large;
+    padding: 20px;
+    margin-top: 0px;
+    color: darkblue;
+    background-color: rgb(159, 234, 209);
+    text-align: center;
+}
+
+h2 {
+    color: rgb(209, 96, 96);
+    margin-top: 20px;
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-align: center;
+
+}
+
+table {
+    color: #e66e61;
+    width: 95%;
+    font-size: 35px;
+    margin: auto;
+    height: 40px;
+    text-align: center;
+    border-spacing: 0px;
+    border-bottom: rgb(164, 104, 104) 4px solid;
+}
+
+thead {
+    background-color: rgb(157, 192, 216);
+    height: 70px;
+
+}
+
+tbody {
+    background-color: #2c3e50;
+
+
+
+}
+
+tfoot {
+
+    background-color: #2c3e50;
+    border-bottom: 4px solid;
+}
+
+#cs {
+    text-align: left;
+    float: 40px;
+    ;
+    width: 65%;
+    margin-top: 0px;
+    margin-bottom: 30px;
+    font-size: 18px;
+    background-color: rgb(185, 215, 182);
+    color: black;
+}
+
+.ab {
+    font-size: large;
+    padding: 30px;
+    margin-top: 32px;
+    color: darkblue;
+    background-color: rgb(41, 84, 84);
+    text-align: center;
+
+
+}
+
+
+
+
+
+.quote-form {
+
+    position: absolute;
+    top: 52%;
+    left: 80%;
+    transform: translate(-40%, -50%);
+
+
+
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px;
+    border-radius: 5px;
+    width: 350px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    margin-bottom: 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+
+}
+
+label {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 30px;
+}
+
+textarea {
+    height: 30px;
+    resize: none;
+}
+
+button {
+    background-color: #e74c3c;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #e74c3c;
+}

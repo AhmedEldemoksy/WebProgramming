@@ -1,0 +1,205 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f5f5dc; /* Light Beige background */
+    color: #4a4a4a; /* Dark Gray text for contrast */
+    line-height: 1.8;
+    overflow-x: hidden;
+}
+
+header {
+    background: #d2b48c; /* Tan Beige header */
+    padding: 30px 0;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #8b7355; /* Darker Beige border */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    background: linear-gradient(45deg, #8b7355, #a0522d); /* Gradient of Beige tones */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 25px;
+}
+
+nav ul li a {
+    color: #4a4a4a; /* Dark Gray text */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.2rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+    position: relative;
+}
+
+nav ul li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #8b7355; /* Darker Beige underline */
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #a0522d; /* Darker Beige hover color */
+    transform: translateY(-3px);
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+main {
+    padding: 50px 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.content {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(210, 180, 140, 0.2); /* Light Beige border */
+    animation: slideIn 1s ease-in-out;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #8b7355; /* Darker Beige heading */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 4px;
+    background: #8b7355; /* Darker Beige underline */
+    bottom: -10px;
+    left: 0;
+    border-radius: 2px;
+}
+
+p, ul {
+    font-size: 1.1rem;
+    color: #4a4a4a; /* Dark Gray text */
+}
+
+ul {
+    padding-left: 30px;
+}
+
+ul li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 20px;
+}
+
+ul li::before {
+    content: "•";
+    color: #8b7355; /* Darker Beige bullet points */
+    font-size: 1.8rem;
+    position: absolute;
+    left: -10px;
+    top: -5px;
+}
+
+.profile-img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    display: block;
+    margin: 30px auto;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+}
+
+footer {
+    background: #d2b48c; /* Tan Beige footer */
+    text-align: center;
+    padding: 20px 0;
+    width: 100%;
+    box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    margin-top: 50px;
+    border-top: 2px solid #8b7355; /* Darker Beige border */
+}
+
+footer p {
+    margin: 0;
+    color: #4a4a4a; /* Dark Gray text */
+    font-weight: 500;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    nav ul li {
+        margin: 0 15px;
+    }
+
+    .content {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    .profile-img {
+        max-width: 300px;
+    }
+}

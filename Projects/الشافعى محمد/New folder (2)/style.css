@@ -1,0 +1,326 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: lateef;
+    src: url(./Lateef-Regular.ttf);
+}
+body{
+    font-family: barlow, sans-serif;
+    width: 100%;
+    height: calc(100vh - 90px);
+    font-family: lateef;
+}
+header{
+    width: 100%;
+    height: 150px;
+    border-bottom: brown 4px solid;
+
+}
+header span{
+    color: brown;
+    font-size: 35px;
+}
+header h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    font-size: 3rem;
+    /* animation: typing 5000ms steps(14) infinite; */
+}
+@keyframes typing {
+   0% ,50%{
+        width: 100%;
+    }
+    25% ,100%{
+        width: 0ch;
+    }
+}
+header .headerDiv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+
+}
+.container{
+    padding: 10px;
+    color: white;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-direction: column;
+}
+.z-2{
+    z-index: 2;
+}
+.rem-3{
+    font-size: 3rem;
+}
+.container img{
+    width: 100%;
+    height: 100%;
+    filter: blur(10px);
+    object-fit: cover;
+    bottom: 0;
+    position: absolute;
+
+}
+
+.container h1{
+    color: white;
+    letter-spacing: 5px;
+    font-size: 50px;
+    
+    
+}
+.container p{
+    max-width: 600px;
+    line-height: 30px;
+    font-size: 25px;
+}
+header a{
+    text-decoration: none;
+    padding:0px 12px ;
+    border-radius: 30px;
+    background-color: transparent ;
+    transition: all 300ms ease;
+}
+header a:hover{
+    background-color: #848484;
+}
+header ul,header li{
+    display: flex;
+    gap: 30px;
+    font-size: x-large;
+    font-weight: bold;
+    list-style: none;
+}
+
+.active{
+    color: brown;
+}
+
+.sectionContainer{
+    margin:50px 10px;
+    width: 100%;
+    min-height: 500px;
+    max-height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.section{
+  overflow: hidden;
+    flex-wrap: wrap;
+    background-color: antiquewhite;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    border-radius: 15px;
+    padding: 10px;
+    transition: all 250ms ease-out;
+}
+.section:hover{
+    scale: 1.1;
+}
+.section h3{
+    font-size: 25px;
+}
+.section p ,li{
+    font-size: 20px;
+}
+.section ul,.section{
+    list-style:decimal-leading-zero ;
+    text-decoration: none;
+}
+footer{
+    width: 100%;
+    height: 100px;
+    background-color: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+
+}
+footer a{
+    text-decoration: none;
+    color: brown;
+    border: none;
+    border-bottom: 3px solid transparent;
+    transition: all 250ms ease-out;
+    border-radius: 10px;
+
+}
+footer a:hover{
+    border-color: white;
+
+}
+.about-us{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+
+}
+ p{
+    font-size: x-large;
+    max-width: 550px;
+}
+
+  #services{
+margin-top: 50px;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+  }
+  #services img{
+    width: 90px;
+    transition: all 250ms ease-out;
+  }
+  #services img:hover{
+    scale: 1.1;
+    cursor: pointer;
+  }
+  #services p{
+    max-width: 400px;
+  }
+  .boxes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+  }
+  form{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px 10px;
+  }
+  .form{
+    padding: 10px;
+    width: 60%;
+    height: 500px;
+    background-color: black;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+  }
+  .inputs{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    font-size: large;
+    font-weight: bold;
+  }
+  #checkbox{
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
+    
+  }
+  .effect{
+    border: none;
+    outline: none;
+    font-weight: bold;
+    font-size:20px ;
+    width: 90%;
+    height:5px;
+    border-radius: 20px;
+    padding: 1px;
+    cursor: pointer;
+    transition: all 250ms ease-out;
+  }
+  .effect:hover{
+    height: 45px;
+    padding: 10px;
+  }
+  #checkbox{
+    align-self: flex-start;
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+  }
+  #checkbox input{
+    width: 17px;
+    
+  }
+  form p{
+    align-self:flex-end ;
+    cursor: pointer;
+    border: none;
+    border-bottom: 3px solid transparent;
+    transition: all 250ms ease-out;
+    font-size: 20px;
+  }
+  form p:hover{
+    border-color:brown;
+  }
+  form button{
+    padding: 15px 50px;
+    border-radius: 20px;
+    background-color: brown;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 250ms ease-out;
+  }
+  button:hover{
+    opacity: .9;
+   
+  }
+  button:active{
+    scale: .9;
+  }
+
+/* Media */
+@media(max-width: 768px) {
+    .headerDiv{
+        flex-direction: column;
+    }
+
+    .section{
+        width: 80%;
+    }
+    form{
+        width: 80%;
+    }
+
+  }

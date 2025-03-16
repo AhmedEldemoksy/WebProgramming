@@ -1,0 +1,31 @@
+body {
+  background-color: #f0f0f0;
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+h1 {
+  text-align: left;
+  color: #ec0c0c;
+  margin-top: 50px;
+}
+h2 {
+  text-align: left;
+  color: #000;
+  margin-top: 50px;
+}
+p1 {
+  text-align: left;
+  color: #000;
+  font-size: 20px;
+}
+p {
+  text-align: center;
+  color: #000;
+  font-size: 20px;
+}
+p2 {
+  text-align: center;
+  color: #f00909;
+  font-size: 20px;
+}

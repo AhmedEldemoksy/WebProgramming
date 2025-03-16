@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #29080d;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.main-section {
+  width: 90%;
+  height: 90%;
+  background-color: rgba(238, 74, 115, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 50px;
+  box-shadow: 5px 5px 20px 1px #ee4a5a;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  padding: 0 10%;
+  color: white;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+.hero-info {
+  flex: 1;
+  max-width: 600px;
+}
+
+.hero h1 {
+  font-size: 50px;
+  text-align: center;
+}
+
+.hero-info h1 span {
+  display: block;
+  font-size: 55px;
+  text-transform: uppercase;
+  background: linear-gradient(to right, #ee4a5a, #f85359, #fd6075, #ff5b5b, #ee4a65);
+  background-size: 200%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.8;
+  padding: 15px 25px;
+  border: 2px solid #ee4a4a;
+  border-radius: 20px;
+  background: rgba(74, 207, 238, 0.1);
+  text-align: center;
+}
+
+.hero-img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0 0 10px #fd4e5a;
+  transition: 0.5s;
+  margin-top: 40px;
+}
+
+.hero-img img {
+  width: 85%;
+  mix-blend-mode: lighten;
+  object-fit: cover;
+
+}
+.hero-img:hover {
+  box-shadow: 0 0 25px #4acfee;
+}
+
+
+.hero-info button {
+  padding: 12px 25px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(to right, #4acfee, #53f8c9);
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(74, 207, 238, 0.5);
+  margin-top: 15px;
+}
+
+.hero-info button:hover {
+  background: linear-gradient(to right, #6070fd, #5bbdff);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(74, 207, 238, 0.8);
+}
+
+/* تحسين استجابة التصميم */
+@media (max-width: 768px) {
+  .hero {
+      flex-direction: column;
+      text-align: center;
+  }
+  
+  .hero h1 {
+      font-size: 40px;
+  }
+
+  .hero-info h1 span {
+      font-size: 45px;
+  }
+
+  .hero-img {
+      width: 280px;
+      height: 280px;
+      margin-top: 20px;
+  }
+
+  .hero-info button {
+      margin-left: 0;
+  }
+}

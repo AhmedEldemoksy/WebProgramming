@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Martin Luther King Jr. - Civil Rights Leader</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow-x: hidden;
+        }
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('img/background.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            filter: blur(5px);
+            z-index: -1;
+        }
+        header {
+            background-image: url('img/header.jpg');
+            background-size: cover;
+            background-position: center 20%;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            height: 150px;
+        }
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+            z-index: 1;
+        }
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 150px;
+            backdrop-filter: blur(10px);
+            mask: linear-gradient(to bottom, transparent, black 70%);
+            z-index: 2;
+        }
+        header h1, header p {
+            position: absolute;
+            z-index: 3;
+            color: rgb(119, 85, 0);
+            width: 100%;
+            text-align: center;
+            bottom: 5px;
+            margin: 0;
+        }
+        header h1 {
+            font-size: 2.5em;
+            bottom: 40px;
+        }
+        header p {
+            font-size: 1.2em;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        h1, h2 {
+            color: #704701;
+        }
+        p {
+            line-height: 1.6;
+        }
+        img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin: 0 20px 10px 0;
+            float: left;
+        }
+        .legacy-photo {
+            float: right;
+            margin: 0 0 20px 20px;
+            max-width: 350px;
+        }
+        .contribution-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .contribution-item img {
+            max-width: 150px;
+            margin-right: 20px;
+            border-radius: 10px;
+        }
+        .clear {
+            clear: both;
+        }
+        .qr-code {
+            text-align: center;
+            margin-top: 40px;
+        }
+        .qr-code img {
+            max-width: 100px;
+            transition: transform 0.3s ease;
+        }
+        .qr-code img:hover {
+            transform: scale(4);
+            transition: ease-in;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Martin Luther King Jr.</h1>
+        <p>Leader of the Civil Rights Movement</p>
+    </header>
+
+    <div class="container">
+        <img src="img/martin-luther-king.jpg" alt="Portrait of Martin Luther King Jr.">
+        
+        <h2>Early Life</h2>
+        <p>Martin Luther King Jr. was born on January 15, 1929, in Atlanta, Georgia. He was a Baptist minister and a key leader in the American Civil Rights Movement, advocating for racial equality and justice through nonviolent resistance.</p>
+
+        <div class="clear"></div>
+
+        <h2>I Have a Dream</h2>
+        <p>On August 28, 1963, Martin Luther King Jr. delivered his iconic <em>"I Have a Dream"</em> speech during the March on Washington for Jobs and Freedom. This speech remains one of the most famous and influential speeches in American history.</p>
+
+        <h2>Legacy</h2>
+        
+        <img src="img/MLK-Nobel.png" alt="Martin Luther King Jr. receiving the Nobel Prize" class="legacy-photo">
+        <p>Martin Luther King Jr.'s leadership and activism played a pivotal role in ending segregation and advancing civil rights in the United States. He was awarded the Nobel Peace Prize in 1964 for his efforts to combat racial inequality through nonviolent means.</p>
+
+        <div class="clear"></div>
+
+        <h2>Key Contributions</h2>
+        <div class="contribution-item">
+            <img src="img/montgomery-bus-boycott.jpg" alt="Montgomery Bus Boycott">
+            <div>
+                <strong>Leader of the Montgomery Bus Boycott (1955-1956)</strong>
+                <p>Martin Luther King Jr. led the Montgomery Bus Boycott, a pivotal event in the Civil Rights Movement, which ended racial segregation on public buses.</p>
+            </div>
+        </div>
+        <div class="contribution-item">
+            <div>
+                <strong>Founding member of the Southern Christian Leadership Conference (SCLC)</strong>
+                <p>King co-founded the SCLC, an organization that played a key role in the Civil Rights Movement, advocating for nonviolent protest and civil disobedience.</p>
+            </div>
+        </div>
+        <div class="contribution-item">
+            <img src="img/civil-rights-act.jpg" alt="Civil Rights Act">
+            <div>
+                <strong>Advocacy for the Civil Rights Act of 1964 and the Voting Rights Act of 1965</strong>
+                <p>King's efforts were instrumental in the passage of these landmark laws, which outlawed discrimination and protected voting rights for African Americans.</p>
+            </div>
+        </div>
+        <div class="contribution-item">
+            <div>
+                <strong>Promotion of nonviolent resistance inspired by Mahatma Gandhi</strong>
+                <p>King championed nonviolent resistance as a powerful tool for social change, inspired by the teachings of Mahatma Gandhi.</p>
+            </div>
+        </div>
+
+        <h2>Quotes</h2>
+        <blockquote>
+            <p>"I have a dream that my four little children will one day live in a nation where they will not be judged by the color of their skin but by the content of their character."</p>
+            <cite>— Martin Luther King Jr., 1963</cite>
+        </blockquote>
+
+        
+        <div class="qr-code">
+            <img src="img/youtube-qr-code.png" alt="YouTube Video QR Code">
+        </div>
+    </div>
+
+</body>
+</html>

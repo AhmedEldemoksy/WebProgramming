@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saul Goodman & Associates - Elite Legal Defense</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Chakra+Petch:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --gold: #FFD700;
+            --dark-red: #8B0000;
+            --legal-blue: #000080;
+        }
+
+        body {
+            font-family: 'Bebas Neue', sans-serif;
+            background: linear-gradient(rgba(0,0,0,0.95), rgba(0,0,0,0.95)), url('Images/bg-legal-paper.jpg') fixed;
+            color: white;
+            min-height: 100vh;
+        }
+
+        .gold-border {
+            border: 3px solid var(--gold);
+            box-shadow: 0 0 25px rgba(255,215,0,0.3);
+        }
+
+        .service-card {
+            height: 500px;
+            transition: all 0.5s;
+            perspective: 1000px;
+        }
+
+        .service-card:hover {
+            transform: scale(1.03) rotateY(10deg);
+        }
+
+        .card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+        .card-front, .card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            padding: 2rem;
+        }
+
+        .card-back {
+            transform: rotateY(180deg);
+            background: linear-gradient(45deg, #000, var(--dark-red));
+        }
+
+        .justice-text {
+            font-size: 4.5rem;
+            text-shadow: 0 0 25px var(--gold);
+            background: linear-gradient(90deg, var(--gold), white, var(--gold));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: text-glow 3s linear infinite;
+        }
+
+        @keyframes text-glow {
+            0% { background-position: 0% 50%; }
+            100% { background-position: 100% 50%; }
+        }
+
+        .client-testimonial {
+            border-left: 3px solid var(--gold);
+            position: relative;
+            transition: all 0.3s;
+        }
+
+        .client-testimonial:hover {
+            transform: translateX(20px);
+        }
+
+        .timeline-item {
+            padding: 2rem;
+            border-bottom: 2px dashed var(--gold);
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '⚖';
+            position: absolute;
+            left: -35px;
+            top: 15px;
+        }
+
+        .bio-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .bio-content::before {
+            content: '"';
+            position: absolute;
+            font-size: 10rem;
+            color: var(--gold);
+            opacity: 0.1;
+            top: -30px;
+            left: -10px;
+            z-index: -1;
+        }
+
+        .timeline li {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        .timeline li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="vh-100 d-flex align-items-center position-relative">
+        <div class="container text-center">
+            <img src="Images/saul-logo.webp" class="img-fluid" style="max-width: 700px" alt="Saul Goodman Logo">
+            <h1 class="justice-text mt-4">
+                <span class="d-block">Your Rights</span>
+                <span class="d-block">Our Mission</span>
+            </h1>
+            <div class="mt-4 fs-3 text-warning">
+                "Did you know you have rights? The Constitution says you do, and so do I!"
+            </div>
+        </div>
+    </header>
+
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center justice-text mb-5">Specialized Services</h2>
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <div class="service-card gold-border">
+                        <div class="card-inner">
+                            <div class="card-front bg-dark text-center p-4">
+                                <h3>💰 Asset Protection</h3>
+                                <img src="Images/service1.webp" class="img-fluid my-4" alt="Money laundering service">
+                                <p class="lead">Discreet financial solutions with guaranteed confidentiality</p>
+                            </div>
+                            <div class="card-back p-4 d-flex flex-column justify-content-center">
+                                <h4>Features:</h4>
+                                <ul class="list-unstyled">
+                                    <li>✔ Offshore accounts management</li>
+                                    <li>✔ Cryptocurrency conversion</li>
+                                    <li>✔ Shell company formation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="service-card gold-border">
+                        <div class="card-inner">
+                            <div class="card-front bg-dark text-center p-4">
+                                <h3>👥 Witness Solutions</h3>
+                                <img src="Images/service2.webp" class="img-fluid my-4" alt="Witness tampering service">
+                                <p class="lead">Comprehensive witness management programs</p>
+                            </div>
+                            <div class="card-back p-4 d-flex flex-column justify-content-center">
+                                <h4>Features:</h4>
+                                <ul class="list-unstyled">
+                                    <li>✔ Alibi creation services</li>
+                                    <li>✔ Identity protection</li>
+                                    <li>✔ Memory rehabilitation</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="service-card gold-border">
+                        <div class="card-inner">
+                            <div class="card-front bg-dark text-center p-4">
+                                <h3>📄 Document Services</h3>
+                                <img src="Images/service3.webp" class="img-fluid my-4" alt="Document forgery service">
+                                <p class="lead">Authentic-looking documentation solutions</p>
+                            </div>
+                            <div class="card-back p-4 d-flex flex-column justify-content-center">
+                                <h4>Features:</h4>
+                                <ul class="list-unstyled">
+                                    <li>✔ Passport/ID replication</li>
+                                    <li>✔ Historical record modification</li>
+                                    <li>✔ Diploma certification</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-dark">
+        <div class="container">
+            <h3 class="justice-text mb-5">Client Success Stories</h3>
+            <div class="row g-4">
+                <div class="col-md-6">
+                    <div class="client-testimonial p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="Images/client1.webp" class="rounded-circle me-3" width="60" alt="Client">
+                            <div>
+                                <h5 class="text-warning mb-0">Walter White</h5>
+                                <small>Chemical Entrepreneur</small>
+                            </div>
+                        </div>
+                        <p>"Saul's team made my financial history disappear like magic!"</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="client-testimonial p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="Images/client2.webp" class="rounded-circle me-3" width="60" alt="Client">
+                            <div>
+                                <h5 class="text-warning mb-0">Jesse Pinkman</h5>
+                                <small>Business Owner</small>
+                            </div>
+                        </div>
+                        <p>"They literally saved me from life in prison. Worth every penny!"</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="client-testimonial p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="Images/client3.webp" class="rounded-circle me-3" width="60" alt="Client">
+                            <div>
+                                <h5 class="text-warning mb-0">Mike Ehrmantraut</h5>
+                                <small>Security Consultant</small>
+                            </div>
+                        </div>
+                        <p>"The only lawyer who understands how the game really works."</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="client-testimonial p-4">
+                        <div class="d-flex align-items-center mb-3">
+                            <img src="Images/client4.webp" class="rounded-circle me-3" width="60" alt="Client">
+                            <div>
+                                <h5 class="text-warning mb-0">Gustavo Fring</h5>
+                                <small>Restaurant Chain Owner</small>
+                            </div>
+                        </div>
+                        <p>"Professional discretion at its finest. Highly recommended."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-6">
+                    <img src="Images/saul-bio.webp" class="img-fluid gold-border" alt="Saul Goodman Biography">
+                </div>
+                <div class="col-md-6">
+                    <h3 class="justice-text mb-4">The Saul Goodman Story</h3>
+                    <div class="bio-content">
+                        <p class="lead text-warning">
+                            From James "Jimmy" McGill to the Legendary Saul Goodman
+                        </p>
+                        <div class="gold-border p-4 mb-4">
+                            <p class="mb-3">
+                                A legal maverick who transformed from small-time con artist to Albuquerque's most 
+                                notorious criminal defense attorney. Despite his flamboyant persona, Saul's genius 
+                                for legal loopholes and unwavering dedication to client protection made him 
+                                undisputed king of the courtroom underworld.
+                            </p>
+                            <ul class="list-unstyled timeline">
+                                <li class="mb-3">⚖ Architect of the "Better Call Saul" empire</li>
+                                <li class="mb-3">🕶 Master of constitutional loopholes & creative solutions</li>
+                                <li class="mb-3">💰 98% success rate in high-stakes criminal cases</li>
+                                <li>🔓 Currently reforming justice system perspectives at ADX Montrose</li>
+                            </ul>
+                        </div>
+                        <div class="text-muted small">
+                            <em>"Saul Goodman" - A philosophy, not just a name.<br>
+                            ("It's All Good, Man" when Saul's on your side)</em>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-5 bg-black">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-md-4">
+                    <img src="Images/saul-logo-small.webp" width="200" alt="Small Logo">
+                </div>
+                <div class="col-md-4">
+                    <h4 class="text-warning">Contact</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-phone me-2"></i>+1 (505) 842-5662</li>
+                        <li><i class="fas fa-map-marker-alt me-2"></i>Albuquerque, NM</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h4 class="text-warning">Follow Us</h4>
+                    <div class="d-flex gap-3">
+                        <a href="#"><i class="fab fa-facebook fa-2x text-warning"></i></a>
+                        <a href="#"><i class="fab fa-twitter fa-2x text-warning"></i></a>
+                        <a href="#"><i class="fab fa-linkedin fa-2x text-warning"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

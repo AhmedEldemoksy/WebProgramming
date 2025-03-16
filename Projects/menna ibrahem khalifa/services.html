@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Einstein Quotes</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+           
+           
+            text-align: center;
+            padding: 20px;
+            font-size: 24px;
+        }
+        nav {
+            margin: 20px 0;
+        }
+        nav a {
+            text-decoration: none;
+           
+                        margin: 0 15px;
+            font-size: 18px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 20px;
+            background: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+       
+        .quote {
+            font-size: 20px;
+            font-style: italic;
+            margin: 20px 0;
+            padding: 15px;
+            background: #bbb;
+            border-left: 5px solid #bbb;
+            position: relative;
+        }
+        .quote button {
+            position: absolute;
+            right: 10px;
+            top: 10px;
+            background: #bbb;
+            
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            font-size: 14px;
+            border-radius: 5px;
+        }
+        .quote button:hover {
+            background: #bbb;
+        }
+        footer {
+            background-color: #000000;
+          
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+    <script>
+        function copyQuote(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Copied to clipboard: " + text);
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>Einstein Quotes</header>
+    <nav class="wow animate__animated animate__zoomIn">
+        <a href="index.html">Character Definition</a>
+        <a href="about.html">Einstein's Achievements</a>
+        <a href="services.html">Quotes</a>
+    </nav>
+    <div class="container wow animate__animated animate__zoomIn">
+        <h1>Famous Sayings</h1>
+        <div class="quote wow animate__animated animate__fadeInLeft">
+            Imagination is more important than knowledge,it encompasses world
+            <button onclick="copyQuote('Imagination is more important than knowledge. Knowledge is limited, imagination encompasses the world.')">Copy</button>
+        </div>
+        <div class="quote wow animate__animated animate__fadeInRight">
+            Life is like riding a bike. To keep your balance you have to keep moving.
+            <button onclick="copyQuote('Life is like riding a bike. To keep your balance you have to keep moving.')">Copy</button>
+        </div>
+        <div class="quote wow animate__animated animate__fadeInLeft">
+            Insanity is doing the same thing over and over again 
+            <button onclick="copyQuote('Insanity is doing the same thing over and over again and expecting different results.')">Copy</button>
+        </div>
+        <div class="quote wow animate__animated animate__fadeInRight">
+            A person who never made a mistake never tried anything new.
+            <button onclick="copyQuote('A person who never made a mistake never tried anything new.')">Copy</button>
+        </div>
+        <div class="quote wow animate__animated animate__fadeInLeft">
+            Logic will get you from A to B. Imagination will take you everywhere.
+            <button onclick="copyQuote('Logic will get you from A to B. Imagination will take you everywhere.')">Copy</button>
+        </div>
+        <div class="quote wow animate__animated animate__fadeInRight">
+            Education is what remains after one has forgotten what one has learned in school.
+            <button onclick="copyQuote('Education is what remains after one has forgotten what one has learned in school.')">Copy</button>
+        </div>
+        <div class="quote wow animate__animated animate__fadeInLeft">
+            The true sign of intelligence is not knowledge but imagination.
+            <button onclick="copyQuote('The true sign of intelligence is not knowledge but imagination.')">Copy</button>
+        </div>
+        <div class="quote wow animate__animated animate__fadeInRight">
+            Try not to become a man of success, become a man of value.
+            <button onclick="copyQuote('Try not to become a man of success, but rather try to become a man of value.')">Copy</button>
+        </div>
+    </div>
+    <footer>© 2025 Albert Einstein Website</footer>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+</html>

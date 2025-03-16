@@ -1,0 +1,149 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", serif;
+}
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+.content {
+  background-image: url(backgroung-2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #ddd;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+  gap: 8px;
+  padding: 0 15px;
+  margin: auto;
+  width: 100%;
+}
+
+.content::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(255, 0, 0, 0.3);
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+.content::after {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(0, 0, 255, 0.3);
+  left: 0;
+  top: 0;
+  z-index: -1;
+}
+.content svg path {
+  stroke: white;
+  fill: transparent;
+  stroke-width: 0.1;
+  stroke-dasharray: 150;
+  stroke-dashoffset: 150;
+  animation: textanimation 5s ease-in-out 1 forwards;
+}
+@keyframes textanimation {
+  80% {
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: white;
+  }
+}
+.content img {
+  max-width: 200px;
+  border-radius: 50%;
+  transition: 0.3s;
+  animation: imageborder 5s linear infinite forwards;
+}
+@keyframes imageborder {
+  100%,
+  0% {
+    border: 2px solid red;
+  }
+  50% {
+    border: 2px solid blue;
+  }
+}
+.content img:hover {
+  transform: scale(1.1);
+  border: 2px solid #ddd;
+}
+.content .info {
+  background-color: rgba(92, 129, 147, 0.68);
+  padding: 20px 10px;
+}
+.content .info p {
+  text-align: center;
+  max-width: 1000px;
+  line-height: 1.7;
+  color: #fff;
+  text-transform: capitalize;
+  margin: 0;
+}
+.stat {
+  display: flex;
+  gap: 50px;
+}
+.stat table {
+  border-spacing: 0;
+  width: 600px;
+  font-size: 18px;
+  color: #ddd;
+}
+.stat table td,
+.stat table th {
+  border: 1px solid #f9f9f9;
+  border-top: none;
+  padding: 10px;
+}
+
+.stat table th {
+  border-top: 1px solid #f9f9f9;
+}
+.stat ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 0;
+}
+.stat ul li {
+  font-size: 35px;
+}
+.stat ul a {
+  display: block;
+  color: #ccc;
+}
+@media (max-width: 767px) {
+  .content {
+    height: fit-content;
+  }
+  .stat {
+    flex-direction: column;
+    padding: 0 15px;
+    justify-content: center;
+  }
+  .stat table {
+    width: 100%;
+  }
+  .stat ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+  }
+}

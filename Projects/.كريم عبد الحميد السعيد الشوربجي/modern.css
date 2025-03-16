@@ -1,0 +1,30 @@
+body{
+    
+    font-family:Arial,sans-serif ;
+    background-color: rgb(137, 141, 229);
+}
+h1{
+    color: rgb(17, 17, 22);
+    
+}
+p{font-size: 16px;}
+pre{
+    color: rgb(187, 26, 11);
+}
+
+
+
+
+table
+{
+    border-collapse: collapse;
+    margin: auto;
+}
+th,td
+{
+padding: 10px;
+}
+th
+{
+    text-align:left;
+}

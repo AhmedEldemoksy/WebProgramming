@@ -1,0 +1,12 @@
+body{
+    background-color: white;
+    body { font-family: Arial, sans-serif; line-height: 1.6; direction: rtl; text-align: right; background-color: #f4f4f9; color: #333; padding: 20px; }
+         h1 { color: #4a90e2; } 
+         table { width: 60%; margin: 20px 0; border-collapse: collapse; }
+          table,
+          th,
+           td { border: 1px solid #ccc; } 
+           th, td { padding: 10px; text-align: center; } 
+           th { background-color: #4a90e2; color: white; }
+            td { background-color: #e9eef7; } 
+            </style>

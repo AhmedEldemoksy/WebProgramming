@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark's Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+    
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: rgba(90, 89, 89, 0.875);
+            background-size: cover;
+            background-color: #44424261;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1700px;
+            margin: 0 auto;
+            font-size: larger;
+            padding: 30;
+        
+        }
+
+        .navbar {
+            background-color: #333;
+            color: #fff;
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            font-size: x-large;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .navbar .nav-links {
+            list-style-type: none;
+            display: flex;
+            gap: 20px;
+        }
+
+        .navbar .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar .nav-links a:hover {
+            color: #f4f4f4;
+            text-decoration: underline;
+        }
+
+        .hero {
+            background: url('mark.jpg') no-repeat center center/cover;
+            color: #fff;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .hero .btn {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .hero .btn:hover {
+            background-color: #555;
+        }
+
+        .section {
+            padding: 60px 0;
+        }
+
+        .section h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            color: #333;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .achievement {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .achievement i {
+            font-size: 2em;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .achievement h3 {
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .gallery-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 10px;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .overlay {
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            transition: bottom 0.3s ease;
+        }
+
+        .gallery-item:hover .overlay {
+            bottom: 0;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; 
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        .form-group input, .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        button:hover {
+            background-color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .social-links {
+            margin-top: 10px;
+        }
+
+        .social-links a {
+            color: #fff;
+            margin: 0 10px;
+            font-size: 1.2em;
+            transition: color 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: #f4f4f4;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <a href="#" class="logo">Mark</a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#achievements">Achievements</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#video">Video</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Mark</h2>
+            <div class="about-content">
+                <img src="mark4.jpg" alt="Mark's Profile Picture" class="profile-img">
+                <div class="about-text">
+                    <p>Mark Zuckerberg’s Achievements
+                        1.	Founded Facebook (2004):
+                        •	Created Facebook while studying at Harvard, originally called TheFacebook.
+                        •	It became the world’s largest social media platform.
+                        2.	Facebook Goes Public (2012):
+                        •	Facebook was listed on the stock market (IPO), making Mark one of the youngest billionaires.
+                        3.	Acquisition of Instagram (2012):
+                        •	Bought Instagram for $1 billion, expanding Facebook’s reach.
+                        4.	Acquisition of WhatsApp (2014):
+                        •	Purchased WhatsApp for $19 billion, making it one of the biggest tech acquisitions.
+                        5.	Launch of Meta (2021):
+                        •	Rebranded Facebook to Meta, focusing on virtual reality and the metaverse.
+                        6.	Expansion of Artificial Intelligence:
+                        •	Invested in AI technology for Facebook and beyond.
+                        7.	Philanthropy:
+                        •	Founded the Chan Zuckerberg Initiative with his wife to support education, healthcare, and science.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="achievements" class="section">
+        <div class="container">
+            <h2>Achievements</h2>
+            <div class="achievements-grid">
+                <div class="achievement">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Achievement 1</h3>
+                    <p>Founding Facebook (2004) – Mark Zuckerberg co-founded Facebook while studying at Harvard University, revolutionizing social networking</p>
+                </div>
+                <div class="achievement">
+                    <i class="fas fa-medal"></i>
+                    <h3>Achievement 2</h3>
+                    <p>Expanding Facebook Globally – He transformed Facebook from a university project into a worldwide platform with billions of users.</p>
+                </div>
+                <div class="achievement">
+                    <i class="fas fa-award"></i>
+                    <h3>Achievement 3</h3>
+                    <p>Acquiring Instagram & WhatsApp – Under his leadership, Facebook acquired Instagram (2012) and WhatsApp (2014), strengthening its dominance in social media</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <div class="container">
+            <h2>Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="mark1.jpg" alt="Mark at an event">
+                    <div class="overlay">Description for Image 1</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="mark2.jpg" alt="Mark working">
+                    <div class="overlay">Description for Image 2</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="mark3.jpg" alt="Mark with a team">
+                    <div class="overlay">Description for Image 3</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="video" class="section">
+        <div class="container">
+            <h2>Video About Mark</h2>
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Lb4IcGF5iTQ?si=v7oLPUA73E3g5MMf" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                 </video>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Mark's Website. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
